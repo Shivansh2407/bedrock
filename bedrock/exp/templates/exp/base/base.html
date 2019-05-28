@@ -1,0 +1,24 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+ # License, v. 2.0. If a copy of the MPL was not distributed with this
+ # file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+
+{% extends "base-protocol.html" %}
+
+{% block experiments %}
+  {% if switch('convert-experiment-script') %}
+    <!--[if !lte IE 8]><!-->
+      {{ js_bundle('jquery') }}
+      <script type="text/javascript" src="{{ settings.CONVERT_EXPERIMENT_SCRIPT_SRC }}"></script>
+    <!--<![endif]-->
+  {% endif %}
+{% endblock %}
+
+{% block site_js %}
+<!--[if !lte IE 8]><!-->
+  {{ js_bundle('common-protocol-no-jquery') }}
+<!--<![endif]-->
+
+<!--[if lte IE 8]>
+  {{ js_bundle('common-ie8') }}
+<![endif]-->
+{% endblock %}

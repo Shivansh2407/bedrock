@@ -466,6 +466,7 @@ INSTALLED_APPS = (
     'bedrock.sitemaps',
     'bedrock.etc',
     'bedrock.pocketfeed',
+    'bedrock.exp',
     # last so that redirects here will be last
     'bedrock.redirects',
 
@@ -1395,6 +1396,7 @@ CSP_IMG_SRC = CSP_DEFAULT_SRC + [
     'adservice.google.de',
     'adservice.google.dk',
     'creativecommons.org',
+    'cdn-3.convertexperiments.com',  # convert issue 7508
 ]
 CSP_SCRIPT_SRC = CSP_DEFAULT_SRC + [
     # TODO fix things so that we don't need this
@@ -1407,10 +1409,14 @@ CSP_SCRIPT_SRC = CSP_DEFAULT_SRC + [
     'tagmanager.google.com',
     'www.youtube.com',
     's.ytimg.com',
+    'cdn-3.convertexperiments.com',  # convert issue 7508
+    'app.convert.com', # convert issue 7508
+    '100317.track.convertexperiments.com', # # convert issue 7508
 ]
 CSP_STYLE_SRC = CSP_DEFAULT_SRC + [
     # TODO fix things so that we don't need this
     "'unsafe-inline'",
+    'app.convert.com', # # convert issue 7508
 ]
 CSP_CHILD_SRC = [
     'www.googletagmanager.com',
@@ -1459,3 +1465,7 @@ if config('SWITCH_TRACKING_PIXEL', default=str(DEV), parser=bool):
 # FUNNELCAKE_103_LOCALES=de,fr,en-US
 #
 # where "103" in the variable name is the funnelcake ID.
+
+# Issue 7508 - Convert.com experiment sandbox
+CONVERT_EXPERIMENT_SCRIPT_SRC = ('https://cdn-3.convertexperiments.com/js/10039-1003350.js' if DEV else
+                                 'https://cdn-3.convertexperiments.com/js/10039-1003343.js')
