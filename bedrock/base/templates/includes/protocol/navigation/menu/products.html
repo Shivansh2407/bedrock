@@ -11,10 +11,16 @@
         <ul>
           <li>
             <section class="mzp-c-menu-item mzp-has-icon">
-              <a class="mzp-c-menu-item-link" href="{{ url('firefox.browsers') }}" data-link-name="Mozilla" data-link-type="nav" data-link-position="topnav" data-link-group="about">
-                  <img src="/media/protocol/img/logos/firefox/firefox.png" class="mzp-c-menu-item-icon" alt="" width="24" height="24">
-                <h4 class="mzp-c-menu-item-title">Browsers</h4>
+              <a class="mzp-c-menu-item-link" href="{{ url('firefox.products.lockwise') }}" data-link-name="Mozilla" data-link-type="nav" data-link-position="topnav" data-link-group="about">
+                  <img src="/media/img/logos/firefox/logo-lockwise.svg" class="mzp-c-menu-item-icon" alt="" width="24" height="24">
+                <h4 class="mzp-c-menu-item-title">Lockwise</h4>
               </a>
+              <ul class="mzp-c-menu-item-list">
+                <li><a href="https://apps.apple.com/us/app/firefox-lockwise/id1314000270">Download for iOS </a></li>
+                <li><a href="https://play.google.com/store/apps/details?id=mozilla.lockbox&hl=en_US">Download for Android</a></li>
+                <li><a href="https://github.com/mozilla-lockwise/lockwise-addon/releases/download/2.2.5-alpha/lockwise-signed.xpi">Get Browser Extension</a></li>
+                <li><a href="https://support.mozilla.org/en-US/products/firefox-lockwise">Support</a></li>
+              </ul>
             </section>
           </li>
           <li>
@@ -23,16 +29,15 @@
                   <img src="/media/img/logos/firefox/logo-monitor.svg" class="mzp-c-menu-item-icon" alt="" width="24" height="24">
                 <h4 class="mzp-c-menu-item-title">Monitor</h4>
               </a>
+              <ul class="mzp-c-menu-item-list">
+                <li><a href="https://monitor.firefox.com/">Check for Breaches</a></li>
+                <li><a href="https://monitor.firefox.com/breaches">See Breaches</a></li>
+                <li><a href="https://monitor.firefox.com/security-tips">Security Tips</a></li>
+              </ul>
             </section>
           </li>
-          <li>
-            <section class="mzp-c-menu-item mzp-has-icon">
-              <a class="mzp-c-menu-item-link" href="{{ url('firefox.products.lockwise') }}" data-link-name="Mozilla" data-link-type="nav" data-link-position="topnav" data-link-group="about">
-                  <img src="/media/img/logos/firefox/logo-lockwise.svg" class="mzp-c-menu-item-icon" alt="" width="24" height="24">
-                <h4 class="mzp-c-menu-item-title">Lockwise</h4>
-              </a>
-            </section>
-          </li>
+        </ul>
+        <ul>
           <li>
             <section class="mzp-c-menu-item mzp-has-icon">
               <a class="mzp-c-menu-item-link" href="{{ url('firefox.products.send') }}" data-link-name="Mozilla" data-link-type="nav" data-link-position="topnav" data-link-group="about">
@@ -47,17 +52,27 @@
                   <svg class="mzp-c-menu-item-icon" width="24" height="22" xmlns="http://www.w3.org/2000/svg"><path d="M12 21.5c-6.627 0-12-5.373-12-12v-6a3 3 0 0 1 3-3h18a3 3 0 0 1 3 3v6c0 6.627-5.373 12-12 12zm5.977-15.048a1.485 1.485 0 0 0-1.087.479l-4.923 4.924-4.835-4.851A1.476 1.476 0 0 0 6 6.452a1.5 1.5 0 0 0-1.071 2.55l-.024.016 4.94 4.96 1.06 1.06a1.5 1.5 0 0 0 2.121 0l1.06-1.06 4.964-4.96a1.5 1.5 0 0 0-1.073-2.566z" fill="#FF4056" fill-rule="nonzero"/></svg>
                   <h4 class="mzp-c-menu-item-title">Pocket</h4>
                 </a>
+                <ul class="mzp-c-menu-item-list">
+                  <li><a href="https://getpocket.com/signup?ep=3&s=ffi&src=extension&t=login&tv=panel_tryit&v=storyboard_lm_nonfxa">Sign Up</a></li>
+                  <li><a href="https://apps.apple.com/us/app/pocket-save-read-grow/id309601447">Download for iOS</a></li>
+                  <li><a href="https://play.google.com/store/apps/details?id=com.ideashower.readitlater.pro&hl=en_US">Download for Android</a></li>
+                </ul>
               </section>
             </li>
-          <li>
-            <section class="mzp-c-menu-item">
-              <a class="mzp-c-menu-item-link" href="{{ url('firefox.products.index') }}" data-link-name="Mozilla" data-link-type="nav" data-link-position="topnav" data-link-group="about">
-                <h4 class="mzp-c-menu-item-title">See all Products</h4>
-              </a>
-            </section>
-          </li>
         </ul>
       </div>
+      <div class="mzp-c-menu-panel-card">
+          <section class="mzp-c-card mzp-c-card-extra-small has-aspect-3-2">
+            <a class="mzp-c-card-block-link" href="{{ url('firefox.products.index') }}"">
+              <div class="mzp-c-card-media-wrapper">
+              <img class="mzp-c-card-image" src="../../../static/img/card/card-image.png" alt="">
+              </div>
+              <div class="mzp-c-card-content">
+              <h2 class="mzp-c-card-title">See all Products</h2>
+              </div>
+            </a>
+          </section>
+        </div>
     </div><!-- close .mzp-c-menu-panel-container -->
   </div><!-- close .mzp-c-menu-panel -->
 </li><!-- close about -->

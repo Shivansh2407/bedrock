@@ -13,7 +13,6 @@
           Firefox
         </a>
       </div>
-
       <div class="mzp-c-navigation-items" id="mzp-c-navigation-items">
         <div class="mzp-c-navigation-download">
           <div class="c-navigation-fxa-cta-container">
@@ -28,8 +27,8 @@
             <ul class="mzp-c-menu-category-list">
               {% include 'includes/protocol/navigation/menu/browsers.html' %}
               {% include 'includes/protocol/navigation/menu/products.html' %}
-              <li class="mzp-c-menu-category"><a href="{{ url('firefox.membership') }}" class="mzp-c-menu-title">Membership</a></li>
-              <li class="mzp-c-menu-category"><a href="{{ url('firefox.news') }}" class="mzp-c-menu-title">News</a></li>
+              {% include 'includes/protocol/navigation/menu/join.html' %}
+              {% include 'includes/protocol/navigation/menu/fx-about.html' %}
             </ul>
           </nav>
         </div><!-- close .mzp-c-navigation-menu -->

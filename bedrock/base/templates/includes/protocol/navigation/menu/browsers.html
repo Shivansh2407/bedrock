@@ -6,57 +6,69 @@
   <a class="mzp-c-menu-title" href="{{ url('firefox.browsers') }}" aria-haspopup="true" aria-controls="mzp-c-menu-panel-about">{{ _('Browsers') }}</a>
   <div class="mzp-c-menu-panel mzp-has-card" id="mzp-c-menu-panel-about">
     <div class="mzp-c-menu-panel-container">
-      <button class="mzp-c-menu-button-close" type="button" aria-controls="mzp-c-menu-panel-about">{{ _('Close About menu') }}</button>
+      <button class="mzp-c-menu-button-close" type="button" aria-controls="mzp-c-menu-panel-about">{{ _('Close Browsers menu') }}</button>
       <div class="mzp-c-menu-panel-content">
         <ul>
           <li>
-            <section class="mzp-c-menu-item mzp-has-icon">
+            <section class="mzp-c-menu-item">
               <a class="mzp-c-menu-item-link" href="{{ url('firefox.new') }}" data-link-name="Mozilla" data-link-type="nav" data-link-position="topnav" data-link-group="about">
-                  <img src="https://www.mozilla.org/media/protocol/img/logos/firefox/firefox.3a7f6cda231d.png" class="mzp-c-menu-item-icon" alt="" width="24" height="24">
-                <h4 class="mzp-c-menu-item-title">Desktop</h4>
+                <h4 class="mzp-c-menu-item-title">Firefox Desktop Browser</h4>
               </a>
+              <ul class="mzp-c-menu-item-list">
+                <li><a href="https://www.mozilla.org/en-US/firefox/new/">Download</a></li>
+                <li><a href="https://addons.mozilla.org/en-US/firefox/">Extensions</a></li>
+                <li><a href="https://support.mozilla.org/en-US/products/firefox">Support</a></li>
+                <li><a href="https://www.mozilla.org/en-US/privacy/firefox/">Privacy</a></li>
+              </ul>
             </section>
           </li>
           <li>
-            <section class="mzp-c-menu-item mzp-has-icon">
-              <a class="mzp-c-menu-item-link" href="{{ url('firefox.mobile-android') }}" data-link-name="Mozilla" data-link-type="nav" data-link-position="topnav" data-link-group="about">
-                  <svg class="mzp-c-menu-item-icon" width="24" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 1h10a3 3 0 0 1 3 3v16a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V4a3 3 0 0 1 3-3zm0 2a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H7zm3 16a1 1 0 0 1 0-2h4a1 1 0 0 1 0 2h-4z" fill="#000" fill-rule="nonzero"/></svg>
-                <h4 class="mzp-c-menu-item-title">Mobile for Android</h4>
-              </a>
+            <section class="mzp-c-menu-item">
+              <div class="mzp-c-menu-item-head">
+                <h4 class="mzp-c-menu-item-title">Firefox Mobile Browsers</h4>
+              </div>
+              <ul class="mzp-c-menu-item-list">
+                  <li><a href="https://apps.apple.com/us/app/firefox-private-safe-browser/id989804926">Download for iOS</a></li>
+                  <li><a href="https://play.google.com/store/apps/details?id=org.mozilla.firefox&hl=en_US">Download for Android</a></li>
+                  <li><a href="https://support.mozilla.org/en-US/products/ios">iOS Support</a></li>
+                  <li><a href="https://support.mozilla.org/en-US/products/mobile">Android Support</a></li>
+                  <li><a href="https://www.mozilla.org/en-US/privacy/firefox/">Privacy</a></li>
+              </ul>
             </section>
           </li>
+        </ul>
+        <ul>
           <li>
-            <section class="mzp-c-menu-item mzp-has-icon">
-              <a class="mzp-c-menu-item-link" href="{{ url('firefox.mobile-ios') }}" data-link-name="Mozilla" data-link-type="nav" data-link-position="topnav" data-link-group="about">
-                  <svg class="mzp-c-menu-item-icon" width="24" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 1h10a3 3 0 0 1 3 3v16a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V4a3 3 0 0 1 3-3zm0 2a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H7zm3 16a1 1 0 0 1 0-2h4a1 1 0 0 1 0 2h-4z" fill="#000" fill-rule="nonzero"/></svg>
-                <h4 class="mzp-c-menu-item-title">Mobile for iOS</h4>
-              </a>
-            </section>
-          </li>
-          <li>
-            <section class="mzp-c-menu-item mzp-has-icon">
+            <section class="mzp-c-menu-item">
               <a class="mzp-c-menu-item-link" href="{{ url('firefox.enterprise.index') }}" data-link-name="Mozilla" data-link-type="nav" data-link-position="topnav" data-link-group="about">
-                  <svg class="mzp-c-menu-item-icon" width="24" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M20.289 15.5a1 1 0 0 1 1.842.78A11 11 0 1 1 7.6 1.912a1 1 0 0 1 .8 1.834A9 9 0 1 0 20.289 15.5zM23 12a1 1 0 0 1-1 1H12a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1 11 11 0 0 1 11 11zm-4.636-6.364A9 9 0 0 0 13 3.056V11h7.944a9 9 0 0 0-2.58-5.364z" fill="#000" fill-rule="nonzero"/></svg>
-                <h4 class="mzp-c-menu-item-title">Enterprise</h4>
-              </a>
-            </section>
-          </li>
-          <li>
-            <section class="mzp-c-menu-item mzp-has-icon">
-              <a class="mzp-c-menu-item-link" href="{{ url('firefox.reality') }}" data-link-name="Mozilla" data-link-type="nav" data-link-position="topnav" data-link-group="about">
-                  <img src="https://www.mozilla.org/media/protocol/img/logos/firefox/firefox.3a7f6cda231d.png" class="mzp-c-menu-item-icon" alt="" width="24" height="24">
-                <h4 class="mzp-c-menu-item-title">Virtual Reality</h4>
+                <h4 class="mzp-c-menu-item-title">Firefox for Enterprise</h4>
               </a>
             </section>
           </li>
           <li>
             <section class="mzp-c-menu-item">
-              <a class="mzp-c-menu-item-link" href="{{ url('firefox.browsers') }}" data-link-name="Mozilla" data-link-type="nav" data-link-position="topnav" data-link-group="about">
-                <h4 class="mzp-c-menu-item-title">See all Browsers</h4>
+              <a class="mzp-c-menu-item-link" href="{{ url('firefox.reality') }}" data-link-name="Mozilla" data-link-type="nav" data-link-position="topnav" data-link-group="about">
+                <h4 class="mzp-c-menu-item-title">Firefox Reality</h4>
               </a>
+              <ul class="mzp-c-menu-item-list">
+                  <li><a href="https://support.mozilla.org/en-US/products/firefox-reality/get-started?&mobile=0">Support</a></li>
+                  <li><a href="https://www.mozilla.org/en-US/privacy/firefox-reality/">Privacy</a></li>
+              </ul>
             </section>
           </li>
         </ul>
+      </div>
+      <div class="mzp-c-menu-panel-card">
+        <section class="mzp-c-card mzp-c-card-extra-small has-aspect-3-2">
+          <a class="mzp-c-card-block-link" href="{{ url('firefox.browsers') }}">
+            <div class="mzp-c-card-media-wrapper">
+            <img class="mzp-c-card-image" src="../../../static/img/card/card-image.png" alt="">
+            </div>
+            <div class="mzp-c-card-content">
+            <h2 class="mzp-c-card-title">See all Browsers</h2>
+            </div>
+          </a>
+        </section>
       </div>
     </div><!-- close .mzp-c-menu-panel-container -->
   </div><!-- close .mzp-c-menu-panel -->
