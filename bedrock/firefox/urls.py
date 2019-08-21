@@ -29,6 +29,7 @@ urlpatterns = (
     url(r'^firefox/(?:%s/)?(?:%s/)?all/$' % (platform_re, channel_re),
         views.firefox_all, name='firefox.all'),
     page('firefox/browsers', 'firefox/browsers.html'),
+    page('firefox/mobile', 'firefox/mobile.html'),
     page('firefox/browsers/reality', 'firefox/reality.html'),
     page('firefox/products', 'firefox/products/index.html'),
     page('firefox/products/monitor', 'firefox/products/monitor.html'),

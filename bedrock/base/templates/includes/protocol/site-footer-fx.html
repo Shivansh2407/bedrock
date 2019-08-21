@@ -1,0 +1,95 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+ # License, v. 2.0. If a copy of the MPL was not distributed with this
+ # file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+
+<footer class="mzp-c-footer" id="colophon" style="background-color:#20123a;">
+  <div class="mzp-l-content">
+    <nav class="mzp-c-footer-primary">
+      <div class="mzp-c-footer-sections" style="padding-bottom: 0;">
+        <section class="mzp-c-footer-section">
+          <h5 class="mzp-c-footer-heading">
+            {{ _('Firefox') }}
+          </h5>
+          <ul class="mzp-c-footer-list">
+            <li><a href="/privacy/firefox/">Privacy</a></li>
+            <li><a href="https://mozilla.design/press-assets/">Press</a></li>
+            <li><a href="https://mozilla.design/">Design Site</a></li>
+          </ul>
+        </section>
+        <section class="mzp-c-footer-section">
+          <h5 class="mzp-c-footer-heading">
+            {{ _('Browsers') }}
+          </h5>
+          <ul class="mzp-c-footer-list">
+            <li><a href="/firefox/new/">Desktop</a></li>
+            <li><a href="/firefox/mobile/">Mobile</a></li>
+            <li><a href="https://mixedreality.mozilla.org/">Reality</a></li>
+            <li><a href="/firefox/enterprise/">Enterprise</a></li>
+          </ul>
+        </section>
+        <section class="mzp-c-footer-section">
+          <h5 class="mzp-c-footer-heading">
+            {{ _('Products') }}
+          </h5>
+          <ul class="mzp-c-footer-list">
+            <li><a href="https://lockwise.firefox.com/">Lockwise</a></li>
+            <li><a href="https://monitor.firefox.com/">Monitor</a></li>
+            <li><a href="https://send.firefox.com/">Send</a></li>
+            <li><a href="">Browsers</a></li>
+            <li><a href="https://getpocket.com/">Pocket</a></li>
+          </ul>
+        </section>
+        <section class="mzp-c-footer-section">
+          <h5 class="mzp-c-footer-heading">
+            {{ _('Join') }}
+          </h5>
+          <ul class="mzp-c-footer-list">
+            <li><a href="https://accounts.firefox.com/signup">Sign Up</a></li>
+            <li><a href="https://accounts.firefox.com/signin">Sign In</a></li>
+            <li><a href="/firefox/accounts/">Benefits</a></li>
+          </ul>
+        </section>
+        <section class="mzp-c-footer-section">
+            <h5 class="mzp-c-footer-heading">
+              {{ _('Developers') }}
+            </h5>
+            <ul class="mzp-c-footer-list">
+              <li><a href="/firefox/developer/">Dev. Edition</a></li>
+              <li><a href="/firefox/channel/desktop/#beta">Beta Desktop</a></li>
+              <li><a href="/firefox/channel/android/">Beta Android</a></li>
+              <li><a href="/firefox/channel/desktop/#nightly">Nightly Desktop</a></li>
+              <li><a href="/firefox/channel/android/#beta">Nightly Android</a></li>
+            </ul>
+          </section>
+      </div>
+    </nav>
+    <nav class="mzp-c-footer-secondary">
+      <div class="mzp-c-footer-language">
+        {% include 'includes/protocol/lang-switcher.html' %}
+      </div>
+      <ul class="mzp-c-footer-links-social">
+        <li><a class="twitter" href="https://twitter.com/firefox" data-link-type="footer" data-link-name="Twitter (@firefox)">{{ _('Twitter') }}<span> (@firefox)</span></a></li>
+        <li><a class="instagram" href="https://www.instagram.com/firefox/" data-link-type="footer" data-link-name="Instagram (@firefox)">{{ _('Instagram') }}<span> (@firefox)</span></a></li>
+        <li><a class="youtube" href="https://www.youtube.com/user/firefoxchannel" data-link-type="footer" data-link-name="youTube (@firefoxchannel)">{{ _('YouTube') }}<span> (@firefoxchannel)</span></a></li>
+      </ul>
+      <div class="mzp-c-footer-legal">
+        <p class="mzp-c-footer-license">
+          {% trans url='https://foundation.mozilla.org', link_type='footer', link_name='Mozilla Foundation' %}
+            Visit Mozilla Corporation’s not-for-profit parent, the <a href="{{ url }}" data-link-type="{{ link_type }}" data-link-name="{{ link_name }}">Mozilla Foundation</a>.
+          {% endtrans %}<br>
+          {%- trans url=url('foundation.licensing.website-content') -%}
+              Portions of this content are ©1998–{{ current_year }} by individual mozilla.org
+              contributors. Content available under a <a rel="license" href="{{ url }}">Creative Commons license</a>.
+          {%- endtrans -%}
+        </p>
+        <ul class="mzp-c-footer-terms">
+          <li><a href="{{ url('privacy') }}" data-link-type="footer" data-link-name="Privacy">{{ _('Privacy') }}</a></li>
+          <li><a href="{{ url('privacy.notices.websites') }}" data-link-type="footer" data-link-name="Privacy">{{ _('Website Privacy Notice') }}</a></li>
+          <li><a href="{{ url('privacy.notices.websites') }}#cookies" data-link-type="footer" data-link-name="Cookies">{{ _('Cookies') }}</a></li>
+          <li><a href="{{ url('legal.index') }}" data-link-type="footer" data-link-name="Legal">{{ _('Legal') }}</a></li>
+          <li><a href="{{ url('mozorg.about.governance.policies.participation') }}" data-link-type="footer" data-link-name="Community Participation Guidelines">{{ _('Community Participation Guidelines') }}</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</footer>
