@@ -1,0 +1,102 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+  # License, v. 2.0. If a copy of the MPL was not distributed with this
+  # file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+
+{% from "macros.html" import monitor_button with context %}
+
+{% add_lang_files "firefox/welcome/stage1" %}
+
+{% extends "firefox/base/base-protocol.html" %}
+
+{# "noindex" pages should not have the canonical or hreflang tags: bug 1442331 #}
+{% block canonical_urls %}<meta name="robots" content="noindex,follow">{% endblock %}
+
+{% block page_title %}{{ _('More than a browser - Firefox products protect your life online') }}{% endblock %}
+{% block page_desc %}{{ _('Use Firefox Monitor to see if your info was compromised in another company’s data breach — and get automatically signed up for future alerts.') }}{% endblock %}
+
+{% block page_css %}
+  {{ css_bundle('firefox_welcome') }}
+{% endblock %}
+
+{% block body_class %}welcome-stage1{% endblock %}
+
+{% block site_header %}{% endblock %}
+
+{% block content %}
+<main class="mzp-t-firefox">
+  <header class="c-page-header">
+    <div class="mzp-l-content c-page-header-inner">
+      {{ high_res_img('logos/firefox/logo-quantum-full-wordmark.png', {'alt': 'Firefox', 'width': '231', 'height': '40', 'class': 'c-page-header-logo-fx'}) }}
+      <p class="c-header-cta"><a class="mzp-c-button mzp-t-secondary mzp-t-small mzp-t-product" href="{{ url('firefox.accounts') }}">{{ _('Join Firefox') }}</a></p>
+    </div>
+  </header>
+
+  <section class="page-intro mzp-t-dark">
+    <div class="mzp-l-content t-narrow">
+      <h1 class="c-page-title">{{ _('You’re on track to stay protected') }}</h1>
+      <p class="c-page-tagline">{{ _('You’ve got the web browser that protects your privacy — now it’s time to get a lookout for hackers.') }}</p>
+    </div>
+  </section>
+
+  <section class="page-body">
+    <div class="mzp-l-content t-narrow">
+      <div class="body-primary">
+        <h2 class="body-primary-title"><img src="{{ static('img/logos/monitor/monitor-wordmark.svg') }}" width="254" height="" alt="Firefox Monitor"></h2>
+
+        <div class="body-primary-body">
+          {# L10n: "Firefox Monitor" is a product name and shouldn't be translated. #}
+          <p>{{ _('Firefox Monitor shows you if your information has been leaked in a known data breach, and alerts you in case it happens in the future.') }}</p>
+
+          <p class="primary-cta">{{ monitor_button(
+            button_id='monitor-button-signed-out',
+            entrypoint='mozilla.org-firefox-welcome-stage1',
+            utm_campaign='welcome',
+            utm_content='welcome-stage1',
+            button_text=_('Check Your Breach Report')
+          ) }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="body-secondary mzp-l-content t-narrow">
+      <div class="c-picto-block t-adjacent-image">
+        <div class="c-picto-block-image">
+          <img src="{{ static('img/firefox/glyphs/private-browsing.svg') }}" alt="">
+        </div>
+
+        <h3 class="c-picto-block-title">{{ _('Stay ahead of hackers') }}</h3>
+        <div class="c-picto-block-body">
+          <p>
+          {% trans security_tips='https://monitor.firefox.com/security-tips/?utm_source=mozilla.org-firefox-welcome-stage1&utm_medium=referral&utm_campaign=welcome&utm_content=welcome-stage1&entrypoint=mozilla.org-firefox-welcome-stage1' %}
+            Find ways to protect your info with <a href="{{ security_tips }}">Monitor Security Tips</a>.
+          {% endtrans %}
+          </p>
+        </div>
+      </div>
+
+      <div class="c-picto-block t-adjacent-image">
+        <div class="c-picto-block-image">
+          <img src="{{ static('img/firefox/glyphs/warning.svg') }}" alt="">
+        </div>
+
+        <h3 class="c-picto-block-title">{{ _('Stay in the know') }}</h3>
+        <div class="c-picto-block-body">
+          <p>
+          {% trans evite_breach='https://blog.mozilla.org/firefox/evite-data-breach/?utm_source=mozilla.org-firefox-welcome-stage&utm_medium=referral&utm_campaign=welcome&utm_content=welcome-stage2&entrypoint=mozilla.org-firefox-welcome-stage1' %}
+            Were you one of 100,985,047 invited to the <a href="{{ evite_breach }}">Evite data breach “party”</a>?
+          {% endtrans %}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <aside class="page-footer">
+    <div class="mzp-l-content t-narrow c-utilities">
+      <p><strong><a href="https://support.mozilla.org/kb/firefox-browser-welcome-content/?utm_source=mozilla.org-firefox-welcome-stage&utm_medium=referral&utm_campaign=welcome&utm_content=welcome-stage2&entrypoint=mozilla.org-firefox-welcome-stage1">{{ _('Why am I seeing this?') }}</a></strong></p>
+    </div>
+  </aside>
+</main>
+{% endblock %}
+
+{% block js %}{% endblock %}

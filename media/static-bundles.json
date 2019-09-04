@@ -854,6 +854,12 @@
         "css/firefox/bestbrowser.scss"
       ],
       "name": "bestbrowser"
+    },
+    {
+      "files": [
+        "css/firefox/welcome.scss"
+      ],
+      "name": "firefox_welcome"
     }
   ],
   "js": [
